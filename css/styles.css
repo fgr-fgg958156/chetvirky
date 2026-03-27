@@ -1,0 +1,103 @@
+:root{
+    --text-colour:#586380;
+    --additional-text-colour:#ACB1C0;
+    --button-colour:#f5f6fa;
+    --bbutton-colour:#4255ff;
+    --dark-bbutton-colour: #1f1c8b;
+    --bg-colour:#fff;
+    --card-colour:#fff;
+    --card-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    color: var(--text-colour);
+    background-color: var(--bg-colour);
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.note-container{
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.note-block{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border: var(--bbutton-colour) 1px solid;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+input {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 8px;
+    background: var(--button-colour);
+    color: var(--text-colour);
+}
+
+input:focus {
+    outline: none;
+    border-color: #a8b1ff;
+    background-color: transparent;
+    box-shadow: 0 0 0 2px rgba(168,177,255,0.3);
+}
+
+input::placeholder{
+    opacity: 0.5;
+    color: var(--text-colour);
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    background-color: var(--bbutton-colour);
+    margin: 0 5px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active{
+    transform: scale(0.95);
+    background-color: var(--dark-bbutton-colour);
+}
+
+.delete{
+    background-color: #F04050;
+}
+
+.delete:active{
+    background-color: #802830;
+}
+
+.sticky-fingers{
+    margin-top: 12px;
+    position: sticky;
+    bottom: 12px;
+    box-shadow: var(--card-shadow);
+}
