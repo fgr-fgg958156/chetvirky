@@ -29,38 +29,51 @@ body{
 }
 
 .note-container{
+    width: 100%;
     padding: 12px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 12px;
+    gap: 12px
 }
 
 .note-block{
-    width: 100%;
+    min-width: 250px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 6px;
     border: var(--bbutton-colour) 1px solid;
     padding: 12px;
+    margin: 0 12px;
     border-radius: 12px;
+}
+
+.action-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 input {
     border: 2px solid transparent;
     border-radius: 8px;
     padding: 8px;
+    margin: 0 12px;
     background: var(--button-colour);
     color: var(--text-colour);
+    transition: all 0.4s ease;
 }
 
 input:focus {
     outline: none;
     border-color: #a8b1ff;
     background-color: transparent;
-    box-shadow: 0 0 0 2px rgba(168,177,255,0.3);
+    box-shadow: 0 0 0 2px rgba(168,177,255,0.2);
 }
 
 input::placeholder{
@@ -69,13 +82,23 @@ input::placeholder{
 }
 
 button{
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
     border: none;
     border-radius: 100%;
     background-color: var(--bbutton-colour);
-    margin: 0 5px;
+    margin: 6px;
+}
+
+.note-label{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.button-block{
+    padding: 0 12px;
 }
 
 button:focus {
@@ -95,9 +118,30 @@ button:active{
     background-color: #802830;
 }
 
+.edit{
+    background-color: #f8c828;
+}
+
+.edit:active{
+    background-color: #b87000;
+}
+
 .sticky-fingers{
     margin-top: 12px;
     position: sticky;
     bottom: 12px;
     box-shadow: var(--card-shadow);
 }
+
+/* .copy-alert{
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    border: var(--additional-text-colour) 1px solid;
+    padding: 12px;
+    border-radius: 6px;
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    transition: all ease 1s;
+} */
