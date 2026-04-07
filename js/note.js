@@ -3,7 +3,7 @@ export const pasteNote = (id, value, label) => {
     newDiv.className = 'note-block';
     newDiv.id = id;
 
-    const newLabel = document.createElement('label');
+    const newLabel = document.createElement('span');
     newLabel.className = 'note-label'
     newLabel.textContent = label || `запис  #${id}`;
     newDiv.appendChild(newLabel);
@@ -14,6 +14,7 @@ export const pasteNote = (id, value, label) => {
 
     const newInput = document.createElement('input');
     newInput.className = 'note-input'
+    newInput.id = `input-no${id}`
     newInput.placeholder = 'запис';
     newInput.value = value ?? '';
     newActionBlock.appendChild(newInput);

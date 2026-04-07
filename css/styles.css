@@ -1,7 +1,7 @@
 :root{
     --text-colour:#586380;
     --additional-text-colour:#ACB1C0;
-    --button-colour:#f5f6fa;
+    --button-colour:#F1F2F7;
     --bbutton-colour:#4255ff;
     --dark-bbutton-colour: #1f1c8b;
     --bg-colour:#fff;
@@ -39,11 +39,13 @@ body{
 }
 
 .note-block{
-    min-width: 250px;
+    width: 90%;
+    max-width: 540px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 6px;
     border: var(--bbutton-colour) 1px solid;
     padding: 12px;
@@ -92,9 +94,7 @@ button{
 }
 
 .note-label{
-    width: 100%;
     text-align: center;
-    padding-bottom: 12px;
 }
 
 .button-block{
